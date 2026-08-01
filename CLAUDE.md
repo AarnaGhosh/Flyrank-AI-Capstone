@@ -15,3 +15,9 @@ FlyRank Frontend AI Engineering Capstone
 - Follow Conventional Commits
 - Build responsive UI
 - Use meaningful variable and function names
+
+## Project Rules
+
+- Every form must have client-side validation.
+- Every input must include an accessible label.
+- Every feature must be reviewed before committing.

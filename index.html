@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Settings Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="settings-card" aria-labelledby="settings-title">
+        <div class="settings-header">
+          <p class="eyebrow">Account Settings</p>
+          <h1 id="settings-title">Update your preferences</h1>
+          <p class="subtitle">Manage your profile details and notification settings.</p>
+        </div>
+
+        <form id="settingsForm" novalidate>
+          <div class="form-grid">
+            <div class="field-group">
+              <label for="fullName">Full Name</label>
+              <input
+                id="fullName"
+                name="fullName"
+                type="text"
+                autocomplete="name"
+                placeholder="Jane Doe"
+                aria-describedby="fullNameError"
+              />
+              <p id="fullNameError" class="error-message" aria-live="polite"></p>
+            </div>
+
+            <div class="field-group">
+              <label for="email">Email</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                placeholder="jane@example.com"
+                aria-describedby="emailError"
+              />
+              <p id="emailError" class="error-message" aria-live="polite"></p>
+            </div>
+
+            <div class="field-group">
+              <label for="password">Password</label>
+              <input
+                id="password"
+                name="password"
+                type="password"
+                autocomplete="new-password"
+                placeholder="Minimum 8 characters"
+                aria-describedby="passwordError"
+              />
+              <p id="passwordError" class="error-message" aria-live="polite"></p>
+            </div>
+
+            <div class="field-group">
+              <label for="theme">Theme</label>
+              <select id="theme" name="theme" aria-describedby="themeError">
+                <option value="">Select theme</option>
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+                <option value="system">System</option>
+              </select>
+              <p id="themeError" class="error-message" aria-live="polite"></p>
+            </div>
+          </div>
+
+          <div class="checkbox-row">
+            <input id="notifications" name="notifications" type="checkbox" />
+            <label for="notifications">Enable Notifications</label>
+          </div>
+
+          <div class="actions">
+            <button type="submit" class="primary-btn">Save Settings</button>
+          </div>
+
+          <p id="successMessage" class="success-message" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
