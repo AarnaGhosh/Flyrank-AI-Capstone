@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Settings Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="settings-card">
+      <h1>Settings</h1>
+      <p class="subtitle">Update your preferences below.</p>
+
+      <form id="settingsForm" class="settings-form">
+        <label class="field">
+          <span>Full name</span>
+          <input type="text" id="fullName" placeholder="Alex Morgan" required />
+        </label>
+
+        <label class="field">
+          <span>Email address</span>
+          <input type="email" id="email" placeholder="alex@example.com" required />
+        </label>
+
+        <div class="field toggle-row">
+          <span>Enable notifications</span>
+          <label class="switch">
+            <input type="checkbox" id="notifications" checked />
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <label class="field">
+          <span>Theme</span>
+          <select id="theme">
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+            <option value="system">System default</option>
+          </select>
+        </label>
+
+        <label class="field">
+          <span>Preferred update frequency</span>
+          <input type="range" id="frequency" min="1" max="5" value="3" />
+          <small id="frequencyValue">3 times a week</small>
+        </label>
+
+        <button type="submit" class="save-btn">Save Settings</button>
+      </form>
+
+      <p id="statusMessage" class="status-message" aria-live="polite"></p>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
